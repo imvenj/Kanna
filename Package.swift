@@ -11,11 +11,7 @@ let package = Package(
         .systemLibrary(
                 name: "libxmlKanna",
                 path: "Modules",
-                pkgConfig: "libxml-2.0",
-                providers: [
-                    .brew(["libxml2"]),
-                    .apt(["libxml2-dev"])
-                ]),
+                pkgConfig: "libxml-2.0"),
         .target(name: "Kanna",
                 dependencies: ["libxmlKanna"],
                 path: "Sources",
